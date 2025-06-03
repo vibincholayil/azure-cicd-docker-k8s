@@ -32,3 +32,6 @@ Helps organize multiple teams or departments
 Centralizes access control and billing
 Separates environments (e.g., dev, staging, prod)
 
+![image](https://github.com/user-attachments/assets/deb4242d-20fc-4d03-b7bd-376a8436ad9b)
+
+
