@@ -1,37 +1,26 @@
-# azure-devops-docker-k8s
-AZURE Devops - Docker / Kubernetes
-how to connect GitHub repository with Azure DevOps (ADO) — an essential setup for enabling automation, pipelines, and collaborative workflows.
+# Manual CI/CD Pipeline Implementation with Azure DevOps, Docker, and Kubernetes. 
+### Introduction  
+It’s a hands-on documentation of step-by-step implementation of a full CI/CD pipeline using Azure DevOps, Docker, and Kubernetes. I have deployed a secret-santa project at the end.  
 
-What is Azure DevOps (ADO)?
-Azure DevOps (ADO) is a cloud platform from Microsoft that helps you manage your software development lifecycle, including:
-Boards: Agile project tracking
-Repos: Git repositories (optional if you’re using GitHub)
-Pipelines: CI/CD automation
-Test Plans: Manual and automated testing
-Artifacts: Package sharing
+#### My steps:
+ - Project Setting.
+ - Ubuntu VM in Azure. 
+ - Set up Azure DevOps agent and install Docker 
+ - Connect GitHub for code and pipeline trigger 
+ - Build Docker image and pushing to Docker Hub 
+ - Create Kubernetes cluster in Azure 
+ - Created release pipeline for K8s
+ - Managing the app with Kubernetes and pipelines
 
-Why Set This Up?
-Many teams keep their source code in GitHub, but use Azure DevOps for:
-Project tracking (Boards)
-CI/CD automation (Pipelines)
-Enterprise-level visibility & control
-
-Connecting GitHub to ADO lets you:
-Automatically build/test/deploy when code changes
-Manage releases and monitor them in one place
-Combine GitHub collaboration with Azure’s DevOps power
-
-Step-by-Step: Connect GitHub to Azure DevOps
-Step 1: Sign in to Azure DevOps
- Step 2: Create an Azure DevOps Organization
- What is an Organization in ADO?
-An organization is the top-level container in Azure DevOps. It’s like a company or team space where all your projects live.
-
-Why It Matters:
-Helps organize multiple teams or departments
-Centralizes access control and billing
-Separates environments (e.g., dev, staging, prod)
-
-![image](https://github.com/user-attachments/assets/deb4242d-20fc-4d03-b7bd-376a8436ad9b)
+## Step 1 : Project Setting  
+Resource name: Azure DevOps  
+I have created a project setting in “Azure Devops organization”.   
+Organization Name: “Vibincholayil”  
+Settings change 1:  
+Organization settings → Pipeline → Settings → [off] “Disable creation of classic build pipelines” and “Disable creation of classic release pipelines” (Enable this two option will help me to create new pipeline with “use the classic editor”)  
+Settings change 2:  
+Organization settings → Security → Policies → [on] “Allow public projects”  
+I have created a project named “myproject”in my organisation  
+Navigation Flow: My Azure DevOps Organizations → Create Project → Done  
 
 
