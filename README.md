@@ -39,8 +39,7 @@ Settings change 2:
 I have created a project named “myproject”in my organisation  
 Navigation Flow: **My Azure DevOps Organizations → Create Project → Done**  
 
-
-
+![image](https://github.com/user-attachments/assets/c7b463aa-b0f9-4d5e-8312-7af97a0e826e)
 
 ## Step 2 :  Ubuntu VM in Azure 
 Resource name: **Azure VM**
