@@ -71,38 +71,33 @@ docker info
 ```
 ## Step 3: Setting up Azure DevOps agent and installing Docker 
 
-Navigation flow:
-Organisation → project settings → Pipelines → Agent pools → Create
+Navigation flow: **Organisation → project settings → Pipelines → Agent pools → Create**  
 
 ![alt text](images/3.png) 
 Add pool inside Agent pools
 As i am created the ubuntu VM i want to install Linux agent
 
-Navigation flow:
-Myprojectpool → Add pool → new agent
+Navigation flow: **Myprojectpool → Add pool → new agent**
 
 ![alt text](images/4.png) 
 I have entered my VM and create a directory  and copied suggested file and extracted and configure and run it 
 
 ![alt text](images/5.png) 
-
-
 ![alt text](images/6.png) 
-Navigation flow for access token: 
-Azure Devops → Personal Access Tokens (right top corner) → copy & paste
+Navigation flow for access token: **Azure Devops → Personal Access Tokens (right top corner) → copy & paste**  
 
 “Myagent” is now visible inside my Agent pools “myprojectpool” but it is offline for making it online i have to run the configuration ./run.sh .
 
 ## Step 4: Connecting GitHub for code and pipeline trigger 
 Create pipeline
-Navigation flow: “myproject” → Pipeline → Create Pipeline → Use the classic editor to create a pipeline without YAML. → GitHub → Authorize using OAuth → Select Repo → Select template → Maven → Apply → Agent pool “myprojectpool” 
+Navigation flow: **“myproject” → Pipeline → Create Pipeline → Use the classic editor to create a pipeline without YAML. → GitHub → Authorize using OAuth → Select Repo → Select template → Maven → Apply → Agent pool “myprojectpool”**  
 
 Create 3 files and confirm everything is perfect.
 
 ![alt text](images/7.png) 
 ![alt text](images/8.png)
 Run Pipeline
-Navigation flow : save and queue → comment (deploy) → Save and run.
+Navigation flow : **save and queue → comment (deploy) → Save and run.**  
 
 ![alt text](images/9.png) 
 After completing the initial test of the pipeline, I wanted to add Docker to the Agent job, so I clicked on the 'Edit' option.
@@ -117,7 +112,7 @@ Navigation flow: Container Resposity → Container registry → New → Registry
 Remove : “Add Pipeline metadata to image(s)” and “Add base image metadata to image(s)”
 
 ![alt text](images/10.png) 
-Save and queue → Run pipeline for docker build → Save and run
+**Save and queue → Run pipeline for docker build → Save and run** 
 
 ## Step 6: Creating Kubernetes cluster in Azure and deploying the app 
 I created a Kubernetes cluster named “myproject” and updated the default node pool to use the Standard_A2_v2 VM size, which provides 2 vCPUs and 4 GiB of memory.
@@ -128,28 +123,27 @@ These are the namespace
 ## Step 7: Created release pipeline for K8s
 
 For creating a release pipeline.
-Navigation flow: Pipeline → Release → New pipeline → Select a template → empty job → confirm (stage name and owner) 
+Navigation flow: **Pipeline → Release → New pipeline → Select a template → empty job → confirm (stage name and owner)**
 
 Add Agent job → Kubectl (search) 
-
-Add Artifact 
-Add → Github → Select repo → branch → version → Add
-
+Add Artifact: **Add → Github → Select repo → branch → version → Add** 
 Add Stage  (job)
 
 Kubernetes service connection in Kubectl
-New → Azure subscription → Authrisation → cluster (vibin) → Namespace (default) →→ (toggle) Use cluster admin credentials → Service Connection Name (myprojectcontainer2) → Security (toggle) Grant access permission to all pipelines
+**New → Azure subscription → Authrisation → cluster (vibin) → Namespace (default) → (toggle) Use cluster admin credentials → Service Connection Name (myprojectcontainer2) → Security (toggle) Grant access permission to all pipelines** 
 
-Add Commands → [apply] → (toggle) use configuration → File path → link git file → save → OK
+**Add Commands → [apply] → (toggle) use configuration → File path → link git file → save → OK**
 
 Create release
 
 ![alt text](images/12.png) 
 ![alt text](images/13.png) 
 When i click on “Release-1” i can see the release pipeline and click on stage and trigger “deploy”. I can find success.
-Step 8: Managing the app with Kubernetes and pipelines 
+
+## Step 8: Managing the app with Kubernetes and pipelines 
 ![alt text](images/14.png) 
-Now i can find my load balancer ip provided by cluster 
+Now i can find my load balancer ip provided by cluster.
+
 ![alt text](images/15.png) 
 Here is my Secret-santa webapp
 ![alt text](images/16.png) 
