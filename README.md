@@ -39,7 +39,7 @@ Settings change 2:
 I have created a project named “myproject”in my organisation  
 Navigation Flow: **My Azure DevOps Organizations → Create Project → Done**  
 
-![1](images/1.png)
+
 
 
 ## Step 2 :  Ubuntu VM in Azure 
