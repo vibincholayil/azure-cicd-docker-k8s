@@ -39,8 +39,7 @@ Settings change 2:
 I have created a project named “myproject”in my organisation  
 Navigation Flow: **My Azure DevOps Organizations → Create Project → Done**  
 
-
-Hi 
+![image_1](images/1.png)
 
 
 
