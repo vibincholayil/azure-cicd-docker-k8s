@@ -31,11 +31,13 @@ I have created a project setting in “Azure Devops organization”.
 Organization Name: “Vibincholayil”  
 
 Settings change 1:  
-Organization settings → Pipeline → Settings → [off] “Disable creation of classic build pipelines” and “Disable creation of classic release pipelines” (Enable this two option will help me to create new pipeline with “use the classic editor”)  
+**Organization settings → Pipeline → Settings → [off] “Disable creation of classic build pipelines” and “Disable creation of classic release pipelines”** (Enable this two option will help me to create new pipeline with “use the classic editor”)  
+
 Settings change 2:  
-Organization settings → Security → Policies → [on] “Allow public projects”  
+**Organization settings → Security → Policies → [on] “Allow public projects”**
+
 I have created a project named “myproject”in my organisation  
-Navigation Flow: My Azure DevOps Organizations → Create Project → Done  
+Navigation Flow: **My Azure DevOps Organizations → Create Project → Done**  
 
 
 
