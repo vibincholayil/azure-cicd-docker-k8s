@@ -149,8 +149,8 @@ Here is my Secret-santa webapp
 ![alt text](images/16.png) 
 Played!
 ![alt text](images/17.png)
-ERROR:
-ERROR commend: 
+
+## ERROR Found and Resoved: 
 The pipeline is not valid. Job Job_1: Step  input containerRegistry references service connection undefined which could not be found. The service connection does not exist, has been disabled or has not been authorized for use. For authorization details, refer to https://aka.ms/yamlauthz.
 
 
