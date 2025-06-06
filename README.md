@@ -70,7 +70,7 @@ sudo reboot
 docker info
 
 ```
-Step 3: Setting up Azure DevOps agent and installing Docker 
+## Step 3: Setting up Azure DevOps agent and installing Docker 
 
 Navigation flow:
 Organisation → project settings → Pipelines → Agent pools → Create
@@ -94,7 +94,7 @@ Azure Devops → Personal Access Tokens (right top corner) → copy & paste
 
 “Myagent” is now visible inside my Agent pools “myprojectpool” but it is offline for making it online i have to run the configuration ./run.sh .
 
-Step 4: Connecting GitHub for code and pipeline trigger 
+## Step 4: Connecting GitHub for code and pipeline trigger 
 Create pipeline
 Navigation flow: “myproject” → Pipeline → Create Pipeline → Use the classic editor to create a pipeline without YAML. → GitHub → Authorize using OAuth → Select Repo → Select template → Maven → Apply → Agent pool “myprojectpool” 
 
@@ -108,7 +108,7 @@ Navigation flow : save and queue → comment (deploy) → Save and run.
 ![alt text](images/9.png) 
 After completing the initial test of the pipeline, I wanted to add Docker to the Agent job, so I clicked on the 'Edit' option.
 
-Step 5: Building Docker image and pushing to Docker Hub 
+## Step 5: Building Docker image and pushing to Docker Hub 
 
 I installed both the 'Docker CLI Installer' and 'Docker'. Then, I added the Docker container registry in the 'Build and Push' task.
 
@@ -120,13 +120,13 @@ Remove : “Add Pipeline metadata to image(s)” and “Add base image metadata 
 ![alt text](images/10.png) 
 Save and queue → Run pipeline for docker build → Save and run
 
-Step 6: Creating Kubernetes cluster in Azure and deploying the app 
+## Step 6: Creating Kubernetes cluster in Azure and deploying the app 
 I created a Kubernetes cluster named “myproject” and updated the default node pool to use the Standard_A2_v2 VM size, which provides 2 vCPUs and 4 GiB of memory.
 
 ![alt text](images/11.png) 
 These are the namespace
 
-Step 7: Created release pipeline for K8s
+## Step 7: Created release pipeline for K8s
 
 For creating a release pipeline.
 Navigation flow: Pipeline → Release → New pipeline → Select a template → empty job → confirm (stage name and owner) 
