@@ -153,8 +153,13 @@ Played!
 ## ERROR Found and Resoved: 
 The pipeline is not valid. Job Job_1: Step  input containerRegistry references service connection undefined which could not be found. The service connection does not exist, has been disabled or has not been authorized for use. For authorization details, refer to https://aka.ms/yamlauthz.
 
+![alt text](images/18.png)
 
 The error occurred because I forgot to specify the Docker Hub container registry name while setting up the image build and push task.
  I later change the container registry to “vibincholayil” and repository name to “myprojectcontainer”
 After updating the pipeline to point to this correct registry & repository, the error was resolved and my image is visible in docker hub. 
 
+## Concusion
+This project demo set up is a complete CI/CD pipeline using Azure DevOps, Docker, and Kubernetes. It is the way of mannual process  building, and deploying applications, making it in automatic way for software delivery faster and more reliable. I will do the automatic way in my next demo.  
+
+### Thank you!
